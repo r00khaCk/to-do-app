@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap);body {
+    font-family: Arial,sans-serif;
+    font-family: Sarala,sans-serif;
+    margin: 0 auto
+}
+
+h2{
+    margin: 0;
+}
+
+:root {
+    --title: 18px;
+    --sub-title: 16px;
+    --text: 14px;
+    --misc: 10px;
+    --bg-special: #bccbb7;
+    --text-primary: #212529;
+    --bg-primary: #f4f4f4;
+    --bg-selected: #ebebeb;
+    --border-color: #d0d0d0;
+    --color-personal: #fe6b6b;
+    --color-work: #67d8e8;
+    --color-shopping: #fed43b;
+    --btn-primary: #fdd43a;
+    --padding-common: 16px
+}
+
+label{
+    display: block;
+    font-size: var(--text);
+    margin-bottom: 8px;
+}
+
+.main-background{
+    background-color: var(--bg-special);
+    padding: 80px 120px;
+}
+
+.app{
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    -webkit-box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    -moz-box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    height: calc(100vh - 160px);
+
+    &,&-sidebar-left  {
+        padding: var(--padding-common);
+    }
+
+    &-sidebar-left{
+        background-color: var(--bg-primary);
+        border-radius: 8px;
+        height: 100%;
+        overflow: auto;
+        width: 320px;
+    }
+
+    &-content{
+        padding: var(--padding-common);
+        width: calc(100% - 760px);
+    }
+
+    &-sidebar-right{
+        background-color: var(--bg-primary);
+        border-radius: 8px;
+        height: 100%;
+        padding: var(--padding-common);
+        width: 440px;
+    }
+
+    &-title{
+        align-items: center;
+        color: var(--text-primary);
+        display: flex;
+        font-size: var(--title);
+        font-weight: 600;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    &-tasks{
+        &-title{
+            color: var(--text-primary);
+            font-size: var(--text);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        &-types{
+            list-style: none;
+            margin: 8px;
+            padding: 0;
+
+            li{
+                font-size: var(--text);
+                padding: 4px 0;
+
+                span{
+                    display: inline-block;
+                    margin-right: 8px;
+                    text-align: center;
+                    width: 20px; 
+                }
+            }
+        }
+    }
+    
+}
+
+.middle-interface{
+    padding: var(--padding-common);
+    width: calc(100% - 760px);
+}
+
+input {
+    outline: none;
+}
+
+#todo-form{
+    margin-bottom: 20px;
+}
+
+#search-form{
+    flex:1;
+}
