@@ -19,15 +19,19 @@ window.addEventListener('load', function () {
         const tasks_el = document.createElement("li");
         tasks_el.innerHTML = `
             <div class="todo-item">
+                <input type="checkbox" class="input-checkbox">
                 <div class="todo-text">
                     <p>${todoText}</p>
                 </div>
+                <button class="delete-todo"><i class="fa-solid fa-trash-can"></i></button 
             </div>
         `;
 
         
 
+
         todoList.appendChild(tasks_el);
+        
     })
 
 })
