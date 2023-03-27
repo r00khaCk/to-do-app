@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>To Do App</title>
+    <link href="index.css" rel="stylesheet">
+    <script defer="defer" src="main.js"></script>
+    <script src="https://kit.fontawesome.com/7a4be6b7d0.js" crossorigin="anonymous"></script>
+    <body>
+        <div class="position-relative">
+            <div id="notification"></div>
+        </div>
+        <div class="main-background">
+            <div class="app interface-flex">
+                <div class="app-sidebar-left">
+                    <div class="app-title">
+                        <span>Todo</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="interface-flex">
+                        <form id="search-form">
+                            <input id="search-input" class="input-field" placeholder="Search">
+                            <button id="search" class="btn btn-primary" hidden></button>
+                        </form>
+                    </div>
+                    <div>
+                        <div id="result-counter"></div>
+                        <ul id="list-of-results">
+                            <li class="no-data">
+                                <i>type keyword and click search</i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="app-tasks">
+                        <div class="app-tasks-title">TASKS</div>
+                        <ul class="app-tasks-types">
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                                Upcoming
+                            </li>
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-list-check"></i>
+                                </span>
+                                Today
+                            </li>
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </span>
+                                This Week
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="interface-flex justify-content-between">
+                        <h2>Today</h2>
+                        <div class="date-field">
+                            <input type="date" id="date-input" class="input-field">
+                            <button id="set-date" class="btn btn-primary" hidden>Set</button>
+                        </div>
+                    </div>
+                    <div>
+                        <form id="todo-form">
+                            <input id="todo-input" class="input-field input-field-todo" placeholder="Add new todo">
+                            <button id="add-todo" class="btn btn-primary" hidden>Add</button>
+                        </form>
+                    </div>
+                    <div class="interface-flex justify-end">
+                        <span class="mr-2">
+                            <i class="fa-solid fa-border-all"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-list-check"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <ul id="todo-list"></ul>
+                    </div>
+                </div>
+                <div class="app-sidebar-right">
+                    <div id="edit-todo"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</head>

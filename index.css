@@ -1,0 +1,376 @@
+@import url(https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap);body {
+    font-family: Arial,sans-serif;
+    font-family: Sarala,sans-serif;
+    margin: 0 auto
+}
+
+h2 {
+    margin: 0
+}
+
+:root {
+    --title: 18px;
+    --sub-title: 16px;
+    --text: 14px;
+    --misc: 10px;
+    --bg-special: #bccbb7;
+    --text-primary: #212529;
+    --bg-primary: #f4f4f4;
+    --bg-selected: #ebebeb;
+    --border-color: #d0d0d0;
+    --color-personal: #fe6b6b;
+    --color-work: #67d8e8;
+    --color-shopping: #fed43b;
+    --btn-primary: #fdd43a;
+    --padding-common: 16px
+}
+
+label {
+    display: block;
+    font-size: var(--text);
+    margin-bottom: 8px
+}
+
+.main-background {
+    background-color: var(--bg-special);
+    padding: 80px 120px
+}
+
+.app {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    -webkit-box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    -moz-box-shadow: -1px 1px 106px -1px hsla(0,6%,50%,.63);
+    height: calc(100vh - 160px)
+}
+
+.app,.app-sidebar-left {
+    padding: var(--padding-common)
+}
+
+.app-sidebar-left {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    height: 100%;
+    overflow: auto;
+    width: 320px
+}
+
+.app-content {
+    padding: var(--padding-common);
+    width: calc(100% - 760px)
+}
+
+.app-sidebar-right {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    height: 100%;
+    padding: var(--padding-common);
+    width: 440px
+}
+
+.app-title {
+    align-items: center;
+    color: var(--text-primary);
+    display: flex;
+    font-size: var(--title);
+    font-weight: 600;
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.app-tasks-title {
+    color: var(--text-primary);
+    font-size: var(--text);
+    font-weight: 700;
+    letter-spacing: 1px
+}
+
+.app-tasks-types {
+    list-style: none;
+    margin: 8px;
+    padding: 0
+}
+.middle-interface{
+    padding: var(--padding-common);
+    width: calc(100%-760px);
+}
+.app-tasks-types li {
+    font-size: var(--text);
+    padding: 4px 0
+}
+
+.app-tasks-types li span {
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    width: 20px
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input {
+    outline: none
+}
+
+#todo-form {
+    margin-bottom: 20px
+}
+
+#search-form,#todo-form {
+    display: flex;
+    padding: var(--padding-common) 0
+}
+
+#search-form {
+    flex: 1
+}
+
+.input-field,.input-textarea {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    flex: 1;
+    font-size: var(--text);
+    font-weight: 700;
+    padding: 10px
+}
+
+.input-field-todo {
+    background-color: #fff;
+    font-size: var(--sub-title);
+    padding: 16px
+}
+
+.no-border-right {
+    border-right: none
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: var(--text);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px
+}
+
+.btn:hover {
+    cursor: pointer
+}
+
+.btn-primary {
+    background: var(--btn-primary)
+}
+
+.todo-item {
+    align-items: center;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex: 1;
+    padding: 10px
+}
+
+.todo-item:hover {
+    background-color: var(--bg-selected);
+    cursor: pointer
+}
+
+li:first-child .todo-item {
+    border-top: 1px solid var(--border-color)
+}
+
+.input-checkbox {
+    height: 16px;
+    margin-top: 5px;
+    width: 16px
+}
+
+#todo-list {
+    height: calc(100vh - 392px);
+    list-style: none;
+    overflow: auto;
+    padding: 0
+}
+
+.todo-text {
+    flex: 1;
+    padding-left: 8px
+}
+
+.todo-text p {
+    margin: 0
+}
+
+#todo-list li .delete-todo,.expand-todo {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px
+}
+
+.todo-description {
+    display: none;
+    font-size: var(--misc);
+    margin-top: 8px;
+    padding: 8px
+}
+
+.todo-description.show {
+    display: block
+}
+
+.expand-todo:hover {
+    cursor: pointer
+}
+
+#todo-list li.no-data {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    font-size: 12px;
+    height: 100px;
+    justify-content: center
+}
+
+.left-sidebar {
+    min-width: 260px;
+    padding: 0 8px;
+    width: 20%
+}
+
+.content {
+    padding: 0 8px;
+    width: 60%
+}
+
+.right-sidebar {
+    min-width: 260px;
+    padding: 0 8px;
+    width: 20%
+}
+
+.interface-flex {
+    display: flex;
+    flex: 1
+}
+
+.align-bottom {
+    align-items: flex-end
+}
+
+#search-list {
+    height: 140px;
+    list-style: none;
+    margin: 10px 0;
+    overflow: auto;
+    padding: 0
+}
+
+#search-list li {
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex: 1;
+    margin-bottom: 10px;
+    padding: 4px 0;
+    position: relative
+}
+
+#search-list li.no-data {
+    font-size: 12px;
+    height: 100px;
+    justify-content: center
+}
+
+#notification {
+    background-color: #f34436;
+    border-radius: 4px;
+    color: #fff;
+    display: none;
+    padding: 10px 8px;
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    transition: all 2s ease;
+    width: 0
+}
+
+#notification.show {
+    display: block;
+    width: 300px
+}
+
+.position-relative {
+    position: relative
+}
+
+#result-count {
+    align-items: center;
+    color: #136917;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: flex-end;
+    margin-top: 10px
+}
+
+.search-date-time {
+    bottom: 4px;
+    color: #b0b7b7;
+    font-size: 10px;
+    font-style: italic;
+    position: absolute;
+    right: 4px
+}
+
+.justify-content-between {
+    justify-content: space-between
+}
+
+.justify-end {
+    justify-content: flex-end
+}
+
+.mr-2 {
+    margin-right: 8px
+}
+
+.date-field {
+    display: flex
+}
+
+.date-field .input-field {
+    background-color: transparent;
+    border: none
+}
+
+.w-100 {
+    width: 100%
+}
+
+.mt-4 {
+    margin-top: 16px
+}
+
+.py-4 {
+    padding: 16px 0
+}
+
+.date-description,.due-date {
+    font-size: var(--misc)
+}
+
+.due-date {
+    background: var(--color-work);
+    border-radius: 4px;
+    margin-right: 4px;
+    padding: 4px 8px
+}
