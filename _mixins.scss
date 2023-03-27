@@ -1,0 +1,11 @@
+@import 'functions';
+@import 'variables';
+
+@mixin btnProperty($border,$border-radius,$color,$font-size,$font-weight,$letter-spacing){
+    border: $border;
+    border-radius: $border-radius;
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-size;
+    letter-spacing: $letter-spacing;
+}

@@ -1,0 +1,3 @@
+@function paddingSize($a,$b){
+    @return ($a * 1px) ($b * 1px);
+}
