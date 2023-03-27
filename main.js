@@ -35,6 +35,8 @@ window.addEventListener('load', function () {
             todoList.removeChild(tasks_el);
             //console.log("button pressed")
         });
+
+        
         
 
         // const deleteButton = document.querySelector('#btn-delete-todo');
