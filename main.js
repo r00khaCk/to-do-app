@@ -17,9 +17,10 @@ window.addEventListener('load', function () {
         console.log(todos)
 
         const tasks_el = document.createElement("li");
+        const checkBoxInput = document.createElement('input');
+        checkBoxInput.setAttribute('type', 'checkbox');
         tasks_el.innerHTML = `
             <div class="todo-item">
-                <input type="checkbox" class="input-checkbox">
                 <div class="todo-text">
                     <p>${todoText}</p>
                 </div>
