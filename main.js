@@ -28,11 +28,38 @@ window.addEventListener('load', function () {
             </div>
         `;
 
+        todoList.appendChild(tasks_el); 
+
+        const deleteButton = tasks_el.querySelector('.delete-todo');
+        deleteButton.addEventListener('click', () => {
+            todoList.removeChild(tasks_el);
+            //console.log("button pressed")
+        });
+        
+
+        // const deleteButton = document.querySelector('#btn-delete-todo');
+        // deleteButton.addEventListener('click', () =>{
+        //     todoList.removeChild(tasks_el);
+        //     // deleteButtonClicked(tasks_el);
+        //     //console.log(todos);
+        // });
+
+        // function deleteButtonClicked(input){
+        //     const index = todos.indexOf(input);
+        //     if (index > -1) { // only splice array when item is found
+        //         todos.splice(index, 1); // 2nd parameter means remove one item only
+        //     }
+        //     return; 
+        // }
+
+    });
+
+    
+
         
 
 
-        todoList.appendChild(tasks_el);
-        
-    })
 
-})
+    
+
+});
