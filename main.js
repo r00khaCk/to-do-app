@@ -29,30 +29,25 @@ window.addEventListener('load', function () {
         `;
 
         todoList.appendChild(tasks_el); 
-
+        
+        //delete button action listener
         const deleteButton = tasks_el.querySelector('.delete-todo');
         deleteButton.addEventListener('click', () => {
             todoList.removeChild(tasks_el);
-            //console.log("button pressed")
+            deleteItem(todoText);
+            console.log(todos);
         });
 
-        
-        
+        //function to delete the corresponding todoText in the array that is corresponding to the to do that is deleted in the web app
+        function deleteItem (input){
+            const index = todos.indexOf(input);
+            if (index > -1 ) {
+                todos.splice(index,1);
+            }
+            return;
 
-        // const deleteButton = document.querySelector('#btn-delete-todo');
-        // deleteButton.addEventListener('click', () =>{
-        //     todoList.removeChild(tasks_el);
-        //     // deleteButtonClicked(tasks_el);
-        //     //console.log(todos);
-        // });
+        }
 
-        // function deleteButtonClicked(input){
-        //     const index = todos.indexOf(input);
-        //     if (index > -1) { // only splice array when item is found
-        //         todos.splice(index, 1); // 2nd parameter means remove one item only
-        //     }
-        //     return; 
-        // }
 
     });
 
